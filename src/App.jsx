@@ -1,11 +1,14 @@
 import NavbarComponent from "./components/Header/NavbarComponent";
-import Main from "./components/Main/Main";
+import Recipeis from "./components/Recipeis/Recipeis";
 
 const App = () => {
   return (
     <div className="container mx-auto">
       <NavbarComponent />
-      <Main />
+      <div className="grid lg:grid-cols-3 gap-10 lg:py-10 p-5">
+        <Recipeis />
+        <h2>Menu</h2>
+      </div>
     </div>
   )
 }

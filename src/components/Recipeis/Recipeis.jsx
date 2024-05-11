@@ -7,7 +7,7 @@ const Recipeis = () => {
 
     // Load recipeis
     useEffect(() => {
-        fetch('../../../../public/recipes.json')
+        fetch('./public/recipes.json')
             .then(res => res.json())
             .then(data => setRecipeis(data))
     }, []);
