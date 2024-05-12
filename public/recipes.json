@@ -1,0 +1,80 @@
+[
+    {
+        "recipe_id": 1,
+        "recipe_image": "https://i.ibb.co/dpv3DzF/Classic-Spaghetti-Carbonara.webp",
+        "recipe_name": "Classic Spaghetti Carbonara",
+        "short_description": "Creamy pasta with bacon, eggs, and Parmesan cheese. A simple and comforting Italian classic.",
+        "ingredients": [
+            "Spaghetti",
+            "Bacon",
+            "Eggs"
+        ],
+        "preparing_time": 30,
+        "calories": 450
+    },
+    {
+        "recipe_id": 2,
+        "recipe_image": "https://i.ibb.co/y82gs16/Grilled-Lemon-Herb-Chicken-transformed.webp",
+        "recipe_name": "Grilled Lemon Herb Chicken",
+        "short_description": "Juicy chicken marinated in lemon, garlic, and herbs, then grilled to perfection. Deliciously flavorful and healthy.",
+        "ingredients": [
+            "Chicken breasts",
+            "Lemon",
+            "Garlic"
+        ],
+        "preparing_time": 25,
+        "calories": 320
+    },
+    {
+        "recipe_id": 3,
+        "recipe_image": "https://i.ibb.co/26HGRhP/Vegetarian-Quinoa-Salad-transformed.webp",
+        "recipe_name": "Vegetarian Quinoa Salad",
+        "short_description": "Nutritious quinoa salad with colorful vegetables, feta cheese, and a zesty lemon dressing. Fresh and satisfying.",
+        "ingredients": [
+            "Quinoa",
+            "Cucumber",
+            "Bell peppers"
+        ],
+        "preparing_time": 20,
+        "calories": 280
+    },
+    {
+        "recipe_id": 4,
+        "recipe_image": "https://i.ibb.co/XZhP2Sz/Beef-and-Broccoli-Stir-Fry-transformed.webp",
+        "recipe_name": "Beef and Broccoli Stir-Fry",
+        "short_description": "Tender beef slices and crisp broccoli florets stir-fried in a savory sauce. Quick, easy, and full of flavor.",
+        "ingredients": [
+            "Beef sirloin",
+            "Broccoli",
+            "Soy sauce"
+        ],
+        "preparing_time": 35,
+        "calories": 380
+    },
+    {
+        "recipe_id": 5,
+        "recipe_image": "https://i.ibb.co/FhT331w/Homemade-Margherita-Pizza-transformed.webp",
+        "recipe_name": "Homemade Margherita Pizza",
+        "short_description": "Classic pizza with tangy tomato sauce, fresh mozzarella, basil, and a crispy crust. Perfect for pizza night.",
+        "ingredients": [
+            "Pizza dough",
+            "Tomato sauce",
+            "Fresh mozzarella"
+        ],
+        "preparing_time": 40,
+        "calories": 320
+    },
+    {
+        "recipe_id": 6,
+        "recipe_image": "https://i.ibb.co/syWk5Zz/Chocolate-Chip-Cookies-transformed.webp",
+        "recipe_name": "Chocolate Chip Cookies",
+        "short_description": "Soft and chewy cookies loaded with chocolate chips. A timeless favorite for sweet cravings.",
+        "ingredients": [
+            "All-purpose flour",
+            "Butter",
+            "Brown sugar"
+        ],
+        "preparing_time": 15,
+        "calories": 150
+    }
+]
