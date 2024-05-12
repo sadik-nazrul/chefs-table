@@ -3,20 +3,20 @@ import './App.css'
 import Header from './components/Header/Header'
 import Hero from './components/Hero/Hero'
 import Recipes from './components/Recipes/Recipes'
-import CookingWishlist from './components/CookingWishlist/CookingWishlist'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
-  const [cooking, setCooking] = useState([]);
+  const [wantCook, setWantCook] = useState([]);
 
   const handleWantCook = recipe => {
-    if (!cooking.includes(recipe)) {
-      const newCookingRecipe = [...cooking, recipe];
-      setCooking(newCookingRecipe);
+    if (!wantCook.includes(recipe)) {
+      const newWantCookRecipe = [...wantCook, recipe];
+      setWantCook(newWantCookRecipe);
     }
-    else{
-      toast.warning(`This item "${recipe.recipe_name}" is already have in cooking item`)
+    else {
+      toast.warning(`This item "${recipe.recipe_name}" is already have in wantCook item`)
     }
   }
 
@@ -33,8 +33,11 @@ function App() {
         </div>
 
         <div className='grid lg:grid-cols-5 gap-5'>
-          <Recipes handleWantCook={handleWantCook} />
-          <CookingWishlist cooking={cooking} ToastContainer={ToastContainer} />
+          <Recipes
+            handleWantCook={handleWantCook}
+          />
+
+          <Sidebar wantCook={wantCook} ToastContainer={ToastContainer} />
         </div>
       </div>
     </div>
