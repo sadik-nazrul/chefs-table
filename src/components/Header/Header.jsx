@@ -3,7 +3,7 @@ import { FaRegCircleUser } from "react-icons/fa6";
 
 const Header = () => {
     return (
-        <div className="shadow py-5 sticky top-0">
+        <div className="shadow py-5 sticky top-0 bg-white">
             <div className="container mx-auto grid lg:grid-cols-4 gap-4">
                 <div className="flex items-center justify-center lg:justify-start">
                     <h2 className="text-xl font-semibold">Cooking Recipe</h2>
