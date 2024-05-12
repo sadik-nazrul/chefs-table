@@ -20,6 +20,28 @@ function App() {
     }
   }
 
+
+
+  const [currentCooking, setCurrenCooking] = useState([]);
+    const [prePareTime, setPrpareTime] = useState(0);
+    const [calori, setCalori] = useState(0)
+
+
+    const handlePrepareToCurrentCooking = (cookinItem, prePareTime, calories, id) => {
+        const newCurrentCook = [...currentCooking, cookinItem];
+        setCurrenCooking(newCurrentCook);
+        timeCal(prePareTime, calories)
+        // remove from want to cooking
+        // console.log('remove', id);
+        const remainingWatToCook = wantCook.filter(wantC => wantC.id === id);
+        setWantCook(remainingWatToCook)
+    }
+
+    const timeCal = (prptime, calories) => {
+        setPrpareTime(prePareTime + prptime);
+        setCalori(calori + calories)
+    }
+
   return (
     <div>
       <Header />
@@ -37,7 +59,7 @@ function App() {
             handleWantCook={handleWantCook}
           />
 
-          <Sidebar wantCook={wantCook} ToastContainer={ToastContainer} />
+          <Sidebar wantCook={wantCook} ToastContainer={ToastContainer} currentCooking={currentCooking} handlePrepareToCurrentCooking={handlePrepareToCurrentCooking} prePareTime={prePareTime} calori={calori} />
         </div>
       </div>
     </div>

@@ -1,24 +1,10 @@
 import PropTypes from 'prop-types'
 import WantCook from '../WantCook/WantCook';
-import { useState } from 'react';
+// import { useState } from 'react';
 import CurrentCooking from '../CurrenCooking/CurrentCooking';
 
-const Sidebar = ({ wantCook, ToastContainer }) => {
-    const [currentCooking, setCurrenCooking] = useState([]);
-    const [prePareTime, setPrpareTime] = useState(0);
-    const [calori, setCalori] = useState(0)
-
-
-    const handlePrepareToCurrentCooking = (cookinItem, prePareTime, calories) => {
-        const newCurrentCook = [...currentCooking, cookinItem];
-        setCurrenCooking(newCurrentCook);
-        timeCal(prePareTime, calories)
-    }
-
-    const timeCal = (prptime, calories) => {
-        setPrpareTime(prePareTime + prptime);
-        setCalori(calori + calories)
-    }
+const Sidebar = ({ wantCook, ToastContainer, currentCooking, handlePrepareToCurrentCooking, prePareTime, calori }) => {
+    
 
 
 
@@ -47,7 +33,11 @@ const Sidebar = ({ wantCook, ToastContainer }) => {
 
 Sidebar.propTypes = {
     wantCook: PropTypes.array,
-    ToastContainer: PropTypes.func
+    ToastContainer: PropTypes.func,
+    currentCooking: PropTypes.array,
+    handlePrepareToCurrentCooking: PropTypes.func,
+    prePareTime: PropTypes.number,
+    calori: PropTypes.number
 }
 
 export default Sidebar;
