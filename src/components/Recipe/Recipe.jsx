@@ -4,7 +4,7 @@ import { CiClock2 } from "react-icons/ci";
 import { FaFire } from "react-icons/fa";
 
 
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleWantCook }) => {
     const { recipe_image, recipe_name, short_description, ingredients, preparing_time, calories } = recipe;
 
     return (
@@ -27,13 +27,14 @@ const Recipe = ({ recipe }) => {
                 <p className='text-sm font-light'><FaFire className='inline text-lg' /> {calories} minutes</p>
             </div>
             <div>
-                <button className="bg-green-400 px-5 py-3 rounded">Want to Cook</button>
+                <button className="bg-green-400 px-5 py-3 rounded" onClick={() => handleWantCook(recipe)}>Want to Cook</button>
             </div>
         </div>
     );
 };
 Recipe.propTypes = {
-    recipe: PropTypes.object
+    recipe: PropTypes.object,
+    handleWantCook: PropTypes.func
 }
 
 export default Recipe;
