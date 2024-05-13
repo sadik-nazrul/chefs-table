@@ -1,20 +1,17 @@
 import PropTypes from 'prop-types'
 import WantCook from '../WantCook/WantCook';
-// import { useState } from 'react';
 import CurrentCooking from '../CurrenCooking/CurrentCooking';
 
 const Sidebar = ({ wantCook, ToastContainer, currentCooking, handlePrepareToCurrentCooking, prePareTime, calori }) => {
+
     
-
-
-
 
     return (
         <div className='col-span-2 p-4 border rounded-xl'>
             <h2 className='text-xl text-center pb-4 border-b-2'>Want to Cook: {wantCook.length}</h2>
             <div className='py-4 space-y-4'>
                 {
-                    wantCook.map((wantItem, indx) => <WantCook key={indx} wantItem={wantItem} ToastContainer={ToastContainer} handlePrepareToCurrentCooking={handlePrepareToCurrentCooking}></WantCook>)
+                    wantCook.map((wantItem, indx) => <WantCook key={indx} wantItem={wantItem} ToastContainer={ToastContainer} handlePrepareToCurrentCooking={handlePrepareToCurrentCooking} ></WantCook>)
                 }
             </div>
             <h2 className='text-xl text-center pb-4 border-b-2'>Current Cooking: {currentCooking.length}</h2>

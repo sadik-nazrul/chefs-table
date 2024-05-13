@@ -20,27 +20,25 @@ function App() {
     }
   }
 
+  const [currentCooking, setCurrentCooking] = useState([]);
+  const [prePareTime, setPrpareTime] = useState(0);
+  const [calori, setCalori] = useState(0);
+
+  // const [removeWant, setRemoveWant] = useState([])
 
 
-  const [currentCooking, setCurrenCooking] = useState([]);
-    const [prePareTime, setPrpareTime] = useState(0);
-    const [calori, setCalori] = useState(0)
+  const handlePrepareToCurrentCooking = (cookinItem, prePareTime, calories, id) => {
+    const newCurrentCook = [...currentCooking, cookinItem];
+    setCurrentCooking(newCurrentCook);
+    const remainingWatToCook = wantCook.filter(wantC => wantC.recipe_id !== id);
+    setWantCook(remainingWatToCook)
+    timeCal(prePareTime, calories)
+  }
 
-
-    const handlePrepareToCurrentCooking = (cookinItem, prePareTime, calories, id) => {
-        const newCurrentCook = [...currentCooking, cookinItem];
-        setCurrenCooking(newCurrentCook);
-        timeCal(prePareTime, calories)
-        // remove from want to cooking
-        // console.log('remove', id);
-        const remainingWatToCook = wantCook.filter(wantC => wantC.id === id);
-        setWantCook(remainingWatToCook)
-    }
-
-    const timeCal = (prptime, calories) => {
-        setPrpareTime(prePareTime + prptime);
-        setCalori(calori + calories)
-    }
+  const timeCal = (prptime, calories) => {
+    setPrpareTime(prePareTime + prptime);
+    setCalori(calori + calories)
+  }
 
   return (
     <div>
@@ -59,7 +57,14 @@ function App() {
             handleWantCook={handleWantCook}
           />
 
-          <Sidebar wantCook={wantCook} ToastContainer={ToastContainer} currentCooking={currentCooking} handlePrepareToCurrentCooking={handlePrepareToCurrentCooking} prePareTime={prePareTime} calori={calori} />
+          <Sidebar
+            wantCook={wantCook}
+            ToastContainer={ToastContainer}
+            currentCooking={currentCooking}
+            handlePrepareToCurrentCooking={handlePrepareToCurrentCooking}
+            prePareTime={prePareTime}
+            calori={calori}
+          />
         </div>
       </div>
     </div>

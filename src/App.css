@@ -1,3 +1,15 @@
 .hero-bg{
     background-image: url(./assets/hero-bg.png);
 }
+
+.recipes{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.recipes::before, .recipes::after{
+    content: '';
+    display: table;
+    clear: both;
+}
