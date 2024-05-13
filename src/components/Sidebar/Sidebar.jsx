@@ -4,20 +4,49 @@ import CurrentCooking from '../CurrenCooking/CurrentCooking';
 
 const Sidebar = ({ wantCook, ToastContainer, currentCooking, handlePrepareToCurrentCooking, prePareTime, calori }) => {
 
-    
 
     return (
         <div className='col-span-2 p-4 border rounded-xl'>
-            <h2 className='text-xl text-center pb-4 border-b-2'>Want to Cook: {wantCook.length}</h2>
+
+
             <div className='py-4 space-y-4'>
-                {
-                    wantCook.map((wantItem, indx) => <WantCook key={indx} wantItem={wantItem} ToastContainer={ToastContainer} handlePrepareToCurrentCooking={handlePrepareToCurrentCooking} ></WantCook>)
-                }
+                <div className='bg-green-400 text-black rounded'>
+                    <h2 className='text-xl text-center p-4 border-b-2 border-black'>Want to Cook: {wantCook.length}</h2>
+                    <div className='flex p-2 m-2'>
+                        <p className='w-[6%] px-2'></p>
+                        <p className='w-[30%] px-2'>Name</p>
+                        <p className='w-[17%] px-2'>Time</p>
+                        <p className='w-[17%] px-2'>Calories</p>
+                        <p className='w-[30%] px-2'></p>
+                    </div>
+                </div>
+                <div className='space-y-3'>
+                    {
+                        wantCook.map((wantItem, indx) => <WantCook
+                            key={indx} wantItem={wantItem}
+                            ToastContainer={ToastContainer}
+                            handlePrepareToCurrentCooking={handlePrepareToCurrentCooking}
+                        ></WantCook>)
+                    }
+                </div>
+
+
             </div>
-            <h2 className='text-xl text-center pb-4 border-b-2'>Current Cooking: {currentCooking.length}</h2>
             <div className='py-4 space-y-4'>
+                <div className='bg-green-400 text-black rounded'>
+                    <h2 className='text-xl text-center p-4 border-b-2 border-black'>Current Cooking: {currentCooking.length}</h2>
+                    <div className='flex p-2 m-2'>
+                        <p className='w-[6%]'></p>
+                        <p className='w-[40%]'>Name</p>
+                        <p className='w-[20%]'>Time</p>
+                        <p className='w-[26%]'>Calories</p>
+                    </div>
+                </div>
                 {
-                    currentCooking.map((crrCook, indx) => <CurrentCooking key={indx} crrCook={crrCook}></CurrentCooking>)
+                    currentCooking.map((crrCook, indx) => <CurrentCooking
+                        key={indx}
+                        crrCook={crrCook}
+                    ></CurrentCooking>)
                 }
             </div>
             <div className='flex flex-col items-end'>

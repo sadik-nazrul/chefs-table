@@ -9,6 +9,9 @@ import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
   const [wantCook, setWantCook] = useState([]);
+  const [currentCooking, setCurrentCooking] = useState([]);
+  const [prePareTime, setPrpareTime] = useState(0);
+  const [calori, setCalori] = useState(0);
 
   const handleWantCook = recipe => {
     if (!wantCook.includes(recipe)) {
@@ -19,13 +22,6 @@ function App() {
       toast.warning(`This item "${recipe.recipe_name}" is already have in wantCook item`)
     }
   }
-
-  const [currentCooking, setCurrentCooking] = useState([]);
-  const [prePareTime, setPrpareTime] = useState(0);
-  const [calori, setCalori] = useState(0);
-
-  // const [removeWant, setRemoveWant] = useState([])
-
 
   const handlePrepareToCurrentCooking = (cookinItem, prePareTime, calories, id) => {
     const newCurrentCook = [...currentCooking, cookinItem];

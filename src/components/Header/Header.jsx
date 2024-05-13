@@ -13,7 +13,7 @@ const Header = () => {
                         <li>Home</li>
                         <li>Recipes</li>
                         <li>About</li>
-                        <li>Contact</li>
+                        <li>Search</li>
                     </ul>
                 </div>
                 <div className="flex items-center gap-3 justify-center lg:justify-end">

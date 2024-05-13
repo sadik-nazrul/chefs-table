@@ -18,7 +18,10 @@ const Recipe = ({ recipe, handleWantCook }) => {
                 <h2 className="text-lg font-medium">Ingredients: {ingredients.length}</h2>
                 <ul>
                     {
-                        ingredients.map((ing, indx) => <li className='text-base font-light' key={indx}><GoDotFill className='inline' /> {ing}</li>)
+                        ingredients.map((ing, indx) => <li className='text-base font-light'
+                            key={indx} >
+                            <GoDotFill className='inline' /> {ing}
+                        </li>)
                     }
                 </ul>
             </div>
