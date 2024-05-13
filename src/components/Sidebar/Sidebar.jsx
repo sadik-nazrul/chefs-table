@@ -35,10 +35,9 @@ const Sidebar = ({ wantCook, ToastContainer, currentCooking, handlePrepareToCurr
                 <div className='bg-green-400 text-black rounded'>
                     <h2 className='text-xl text-center p-4 border-b-2 border-black'>Current Cooking: {currentCooking.length}</h2>
                     <div className='flex p-2 m-2'>
-                        <p className='w-[6%]'></p>
                         <p className='w-[40%]'>Name</p>
-                        <p className='w-[20%]'>Time</p>
-                        <p className='w-[26%]'>Calories</p>
+                        <p className='w-[30%]'>Time</p>
+                        <p className='w-[30%]'>Calories</p>
                     </div>
                 </div>
                 {
