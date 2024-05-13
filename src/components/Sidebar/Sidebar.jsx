@@ -6,7 +6,7 @@ const Sidebar = ({ wantCook, ToastContainer, currentCooking, handlePrepareToCurr
 
 
     return (
-        <div className='col-span-2 p-4 border rounded-xl'>
+        <div className='w-full lg:col-span-2 p-4 border rounded-xl'>
 
 
             <div className='py-4 space-y-4'>
