@@ -9,7 +9,7 @@ const WantCook = ({ wantItem, ToastContainer, handlePrepareToCurrentCooking }) =
             <p className='w-[30%]'>{recipe_name}</p>
             <p className='w-[17%]'>{preparing_time} Min</p>
             <p className='w-[17%]'>{calories} Calories</p>
-            <button className="w-[30%] bg-green-400 px-5 py-3 rounded" onClick={() =>
+            <button className="w-[30%] bg-green-400 hover:bg-transparent hover:border hover:text-black px-5 py-3 rounded" onClick={() =>
                 handlePrepareToCurrentCooking(wantItem, preparing_time, calories, recipe_id)
             }>Preparing</button>
             <ToastContainer

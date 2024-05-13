@@ -4,7 +4,8 @@ const Hero = () => {
             <div className="lg:w-2/4 w-full space-y-4">
                 <h2 className="lg:text-5xl text-2xl font-bold text-white">Discover an exceptional cooking class tailored for you!</h2>
                 <p className="text-base font-light text-slate-300">Embark on a flavorful journey through our curated recipe collection, where every dish tells a story. From classic comfort foods to innovative culinary creations, find inspiration for every occasion and palate. Let elevate your cooking experience together!</p>
-                <button className="bg-green-400 px-5 py-3 rounded">Explore Now</button>
+                <button className="bg-green-400 hover:bg-transparent hover:border hover:text-white px-5 py-3 rounded mr-4">Explore Now</button>
+                <button className=" text-white border hover:bg-green-400 hover:text-black hover:border-none px-5 py-3 rounded">Feedback</button>
             </div>
         </div>
     );

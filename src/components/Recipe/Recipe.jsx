@@ -30,7 +30,7 @@ const Recipe = ({ recipe, handleWantCook }) => {
                 <p className='text-sm font-light'><FaFire className='inline text-lg' /> {calories} minutes</p>
             </div>
             <div>
-                <button className="bg-green-400 px-5 py-3 rounded" onClick={() => handleWantCook(recipe)}>Want to Cook</button>
+                <button className="bg-green-400 hover:bg-transparent hover:border hover:text-black px-5 py-3 rounded" onClick={() => handleWantCook(recipe)}>Want to Cook</button>
             </div>
         </div>
     );
